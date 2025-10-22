@@ -14,7 +14,7 @@ The cleaned dataset generated from the Python analysis serves as the foundation 
 
 ## Data
 
-The primary dataset used is `AB_NYC_2019.csv` downloaded from [Kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data). It contains listing details including:
+The primary dataset used is from the `dgomonov/new-york-city-airbnb-open-data` dataset on Kaggle, specifically the `AB_NYC_2019.csv` file. The data is downloaded directly using the `kagglehub` library within the Python notebook. It contains listing details including:
 * Listing ID, Name, Host ID, Host Name
 * Location: `neighbourhood_group` (Borough), `neighbourhood`, `latitude`, `longitude`
 * Listing Details: `room_type`, `price`, `minimum_nights`, `availability_365`
@@ -63,14 +63,14 @@ The primary dataset used is `AB_NYC_2019.csv` downloaded from [Kaggle](https://w
     git clone <your-repo-url>
     cd nyc-airbnb-analysis
     ```
-2.  **Download the data:** Get `AB_NYC_2019.csv` from [Kaggle](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data) and place it inside the `data/` folder.
+2.  **Set up Kaggle API Token:** Ensure you have your `kaggle.json` file configured correctly on your system so `kagglehub` can authenticate. See [Kaggle API Credentials](https://github.com/Kaggle/kaggle-api#api-credentials).
 3.  **Set up Python environment:**
     ```bash
     pip install -r requirements.txt
     ```
-4.  **Run the Jupyter Notebook:** Open and run `nyc_airbnb_analysis.ipynb`. This will perform the analysis and generate the `output/nyc_airbnb_cleaned.csv` file.
-5.  **Visualize in Tableau:** Open Tableau Desktop, connect to the `output/nyc_airbnb_cleaned.csv` file, and build your visualizations based on the suggestions or your own exploration.
-
+4.  **Run the Jupyter Notebook:** Open and run `nyc_airbnb_analysis.ipynb`. The notebook will automatically download the dataset using `kagglehub`, perform the analysis, and generate the `output/nyc_airbnb_cleaned.csv` file.
+5.  **Visualize in Tableau:** Open Tableau Desktop, connect to the `output/nyc_airbnb_cleaned.csv` file, and build your visualizations.
+   
 ## Tools Used
 
 * **Python:** Pandas, NumPy, Matplotlib, Seaborn
