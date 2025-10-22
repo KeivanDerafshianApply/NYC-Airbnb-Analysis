@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+seaborn
+jupyter # Or jupyterlab, depending on your preference
+kagglehub # Add this line
+# Optional: Add openpyxl if you ever need Excel I/O
